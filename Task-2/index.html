@@ -7,19 +7,63 @@
 </head>
 
 <body>
-  <main>
+  <main class="container">
     <section class="hero"> 
       <h1>Get an Expert Orthopaedic Opinion</h1>
       <p>
-        Experiencing knee or back pain in Bengaluru?
-        Come at OrthoNow. Book the consulation and meet with our Orthopaedic Experts.
+        <p>
+  Experiencing knee or back pain in Bengaluru?
+  Book your consultation with experienced orthopaedic specialists at OrthoNow and get expert guidance for the right treatment.
+</p>
       </p>
 
-      <a href="#consultation-form"> Book My Consultation </a>
+      <a href="#consultation-form" class="cta-button"> Book My Consultation </a>
     </section>
-    <section class="trust"> </section>
-    <section class="consultation-form"> </section>
-    <section id="thank-you" hidden> </section>
+    <section class="trust">
+      <h2>Why choose OrthoNow?</h2>
+      <ul>
+        <li><span>✓</span> 9 Orthopaedic Clinics</li>
+        <li><span>✓</span> Serving Bengaluru, Hyderabad & Chennai</li>
+        <li><span>✓</span> Experienced Orthopaedic Specialists</li>
+      </ul>
+    </section>
+    <section id="consultation-form"> 
+      <h2>Book Your Consultation</h2>
+      <form id="consultationForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            autocomplete="name"
+            maxlength="60"
+            required>
+        </div>
+        
+         <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+                autocomplete="tel"
+                inputmode="numeric"
+                maxlength="10"
+                required>
+        </div>
+        <button type="submit" class="cta-button">>
+            Book My Consultation
+        </button>
+      </form>
+    </section>
+    <section id="thank-you" hidden>
+      <h2>Thank You!</h2>
+      <p>Your consultation request has been received.
+          Our team will contact you shortly.</p>
+    </section>
   </main>
   
 </body>
