@@ -1,6 +1,6 @@
 ## Task 1 – GTM Event Schema
 
-OrthoNow currently tracks only page views in Google Analytics 4. Because of this, the marketing team cannot understand how users interact with important elements such as the booking form, Call Now buttons, WhatsApp widget or Patient Guide download.To solve this, I would implement the following GTM event tracking setup.
+OrthoNow currently tracks only page views in Google Analytics 4. Because of this, the marketing team cannot understand how users interact with important elements such as the booking form, Call Now buttons, WhatsApp chat widget, Patient Guide download, Blogs.To solve this, I would implement the following GTM event tracking setup.
 
 ## GTM Event Schema
 
