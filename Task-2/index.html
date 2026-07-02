@@ -243,5 +243,32 @@ form button{
     </section>
   </main>
   
+  <script>
+const consultationForm = document.getElementById("consultationForm");
+const consultationSection = document.getElementById("consultation-form");
+const thankYouSection = document.getElementById("thank-you");
+
+consultationForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+
+    window.dataLayer = window.dataLayer || [];
+
+    window.dataLayer.push({
+        event: "consultation_form_submitted",
+        name: name,
+        phone: phone
+    });
+
+    console.log(window.dataLayer);
+
+    consultationSection.hidden = true;
+    thankYouSection.hidden = false;
+
+    consultationForm.reset();
+});
+  </script>
 </body>
 </html>
