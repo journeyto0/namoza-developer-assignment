@@ -4,6 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book a Consultation | OrthoNow</title>
+
+    <style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --primary:#0F766E;
+    --primary-hover:#115E59;
+    --background:#F8FAFC;
+    --card:#FFFFFF;
+    --heading:#0F172A;
+    --text:#475569;
+    --border:#CBD5E1;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--background);
+    color:var(--text);
+    line-height:1.6;
+}
+
+.container{
+    max-width:900px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.hero{
+    background:var(--card);
+    padding:40px;
+    border:1px solid var(--border);
+    border-radius:14px;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.hero h1{
+    color:var(--heading);
+    font-size:2.2rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.05rem;
+    margin-bottom:30px;
+}
+
+.cta-button{
+    display:inline-block;
+    text-decoration:none;
+    background:var(--primary);
+    color:white;
+    padding:14px 28px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+    border:none;
+    cursor:pointer;
+    font-size:1rem;
+}
+
+.cta-button:hover{
+    background:var(--primary-hover);
+}
+
+.trust{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:30px;
+    margin-bottom:30px;
+}
+
+.trust h2{
+    color:var(--heading);
+    margin-bottom:20px;
+}
+
+.trust ul{
+    list-style:none;
+}
+
+.trust li{
+    margin-bottom:12px;
+    font-size:1rem;
+}
+
+.trust span{
+    color:var(--primary);
+    font-weight:bold;
+    margin-right:8px;
+}
+
+#consultation-form{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:35px;
+    margin-bottom:30px;
+}
+
+#consultation-form h2{
+    color:var(--heading);
+    margin-bottom:25px;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+    color:var(--heading);
+}
+
+input{
+    width:100%;
+    padding:14px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    font-size:1rem;
+    outline:none;
+}
+
+input:focus{
+    border-color:var(--primary);
+}
+
+form button{
+    width:100%;
+}
+
+#thank-you{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:35px;
+    text-align:center;
+}
+
+#thank-you h2{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+#thank-you p{
+    font-size:1rem;
+}
+
+@media(max-width:768px){
+
+    .container{
+        padding:16px;
+        margin:20px auto;
+    }
+
+    .hero{
+        padding:30px 20px;
+    }
+
+    .hero h1{
+        font-size:1.8rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .trust,
+    #consultation-form,
+    #thank-you{
+        padding:25px 20px;
+    }
+}
+    </style>
 </head>
 
 <body>
