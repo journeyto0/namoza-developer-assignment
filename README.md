@@ -11,7 +11,7 @@ Task-1/
 Task-2/
 ├── index.html
 └── assets/
-    └── https://github.com/journeyto0/namoza-developer-assignment/blob/main/Task-2/assets/Screenshot%202026-07-02%20172227.png
+    └── Task-2/assets/Screenshot%202026-07-02%20172227.png
 
 Task-3/
 └── integration-design.md
