@@ -1,1 +1,11 @@
+# Task 3 – Integration Design
 
+For this integration, I would use a backend-driven Direct API approach instead of HubSpot's native form, Zapier or Make. Since the landing page is a custom HTML page, the form submission should first be sent to a secure backend. This keeps API credentials protected and provides better control over validation, logging, retries and future enhancements.
+
+One point to note is that the landing page in Task 2 intentionally collects only Name and Phone because the assignment specifies a minimal two-field form. For a production implementation, I would extend the form to include the Clinic Preference field before sending the data to HubSpot.
+
+The overall flow would be: the user submits the consultation form, JavaScript pushes the `consultation_form_submitted` event into the `dataLayer`, and the backend receives the form data. The backend then checks HubSpot for an existing contact using the submitted phone number. Since HubSpot does not deduplicate contacts by phone number by default, this lookup is important. If a matching contact exists, the record is updated; otherwise, a new contact is created with Name, Phone, Clinic Preference, Source set to **Google Ads - Consultation Landing Page**, and Lead Status set to **New Enquiry**. At the same time, Google Tag Manager listens for the `consultation_form_submitted` event and fires the Google Ads conversion tag. The backend also sends a request to the Karix WhatsApp Business API to deliver the confirmation message.
+
+The biggest failure point in this workflow is the communication between the backend and external APIs such as HubSpot or Karix. If one of these services is temporarily unavailable, the lead should not be lost. Instead, the backend should place the request into a retry queue, log the failure and notify the operations team if retries continue to fail.
+
+The WhatsApp confirmation must be delivered within two minutes. Delays caused by API downtime, network issues, server overload or rate limiting could break this SLA. To monitor this, I would record the submission time and the WhatsApp API response time for every request. If the delivery time exceeds two minutes or the API returns repeated failures, the system should generate an alert so the issue can be investigated immediately.
