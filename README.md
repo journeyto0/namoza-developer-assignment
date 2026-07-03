@@ -1,4 +1,4 @@
-** # Namoza Developer Assignment**
+# Namoza Developer Assignment
 
 This repository contains my submission for the Namoza Developer Assignment. It includes three tasks covering Google Tag Manager (GTM) event tracking, a responsive landing page, and a CRM integration design for the OrthoNow case study.
 
@@ -11,7 +11,7 @@ Task-1/
 Task-2/
 ├── index.html
 └── assets/
-    └── pagespeed-mobile.png
+    └── https://github.com/journeyto0/namoza-developer-assignment/blob/main/Task-2/assets/Screenshot%202026-07-02%20172227.png
 
 Task-3/
 └── integration-design.md
@@ -53,7 +53,7 @@ https://journeyto0.github.io/namoza-developer-assignment/Task-2/
 
 Performance Score: **100**
 
-![PageSpeed Mobile Score](Task-2/assets/pagespeed-mobile.png)
+![PageSpeed Mobile Score](Task-2/assets/Screenshot%202026-07-02%20172227.png)
 
 ---
 
